@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    color: rgb(84, 84, 84);
+}
+
+:root {
+    --f-heading-lg: normal 2rem "Roboto Condensed", sans-serif;
+
+    --f-heading-md: normal 1.5rem "Roboto Condensed", sans-serif;
+
+    --f-heading-sm: normal 1.188em "Roboto Condensed", sans-serif;
+    
+    --f-body: normal .9375em "Roboto Condensed", sans-serif;
+    --f-link: 500 .9375em "Roboto Condensed", sans-serif;
+
+    /*Spacings*/
+    --s--xxxl: 22.25rem;
+    --s--xxl: 8rem;
+    --s--xl: 4rem;
+    --s--lg: 3rem;
+    --s--md: 2rem;
+    --s--sm: 1rem;
+    --s--xs: 0.5rem;
+
+    /*Sizes*/
+    --mw--lg: 60.25rem;
+    --mw--md: 48.75rem;
+    --mw--sm: 40rem;
+    --mw--xs: 30rem;
+    --mw--xxs: 5rem;
+
+} 
+
+/*Elements*/
+
+.text--lg {
+    font: var(--f-heading-lg);
+}
+.text--md{
+    font: var(--f-heading-md);
+}
+.text--sm {
+    font: var(--f-heading-sm);
+}
+
+.body, p {
+    font: var(--f-body);
+}
+
+.link {
+    font: var(--f-link);
+}
+.section {
+    margin: auto;
+    padding: var(--s--sm) var(--s--xl);
+    gap: var(--s--sm);
+
+}
+
+.container {
+    max-width: var(--mw--lg);
+    margin: auto;
+}
+
+.container__small {
+    max-width: var(--mw--md);
+}
+
+.container__smaller {
+    max-width: var(--mw--sm);
+
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    padding: var(--s--sm);
+    gap: var(--s--sm);
+
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: var(--s--sm);
+    gap: var(--s--sm);
+}
+
+/*Header*/
+.header__block {
+    align-items: center;
+    justify-content: space-between;
+    & .header__logo {
+        max-width: var(--mw--xs);
+    }
+    & .link--cool {
+        font: var(--f-link);
+        text-decoration: underline;
+    }
+}
+
+/* Banner */
+
+.banner__block {
+    align-items: center;
+
+    gap: var(--s--lg);
+    padding: var(--s--md);
+
+    & img {
+
+        max-width: var(--mw--sm);
+    }
+}
+.banner__content {
+    flex: 2;
+    gap: var(--s--sm);
+
+    justify-content: center;
+
+    & .btn {
+        background-color: rgb(240, 240, 240);
+        padding: 16px;
+    }
+    
+}
+
+/* Text Frame */
+
+.text--container{
+    justify-content: center;
+
+}
+
+.text__block {
+    padding: var(--s--md) 0;
+}
+.text--frame__block {
+
+    & .p__block {
+        padding: 0;
+    }
+
+}
+
+
+/* First Frame */
+.firstFrame__container {
+    justify-content: end;
+}
+
+.firstFrame__block {
+    justify-content: end;
+
+    & .firstFrame__image {
+        flex-grow: 1;
+        & img {
+            max-height: var(--mw--xs);
+        }
+    }
+
+    & .firstFrame__content {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        flex-wrap: wrap;
+        
+        & .content {
+            display: flex;
+            flex-direction: column;
+
+            gap: var(--s--sm);
+            padding: var(--s--md) 0 var(--s--md)
+            var(--s--md);
+            max-width: 11.25rem;
+            
+            & img {
+                max-width: 11.25rem;
+            }
+        }
+    }
+}
+
+/* Video Frame */
+
+.video__section {
+    display: flex;
+    min-height: var(--mw--sm);
+
+    &.video__block {
+        display: flex;
+        min-height: var(--mw--xs);
+
+        background-image: url(../assets/arhitecture-img-4.jpg);
+
+        & .video__btn {
+            position: relative;
+            top: 50vh;
+            right: 50vw;
+        }
+    }
+}
+
+/* Text 2 Frame */
+
+.text2__container {
+    justify-content: end;
+
+    & .text2__block {
+        justify-content: end;
+
+        & i {
+            min-width: var(--s--md);
+        }
+    
+    }
+}
+
+/* Second Frame */
+
+.frame__block {
+    justify-content: end;
+    & .frame__flex {
+        
+        & img {
+            max-width: 15.625em;
+            gap: var(--s--sm);
+        }
+            
+    }
+}
+
+.footer__container{
+    justify-content: space-between;
+}
